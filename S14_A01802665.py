@@ -10,4 +10,9 @@ if 13 <= age <= 19:
     print("You are a teenager.")
 else:
     print("You are not a teenager.")
+#Write a python script that calculates the user's birthday asking the year they were born.
+year = int(input("What year were you born?:"))
+age = 2025 - year
+print("You are "age" years old.")
+
   
