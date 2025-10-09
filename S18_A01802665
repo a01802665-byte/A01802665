@@ -1,0 +1,82 @@
+#S18_A01802665.py
+
+# Pair programming
+temperaturas = [20,21,32,34,32,21,32]
+avgTempratura = sum(temperaturas) / len(temperaturas)
+print("the average temperature is:", avgTempratura)
+for temperatura in temperaturas:
+    if temperatura > avgTempratura:
+        print("the temperature", temperatura, "is above average")
+    else:
+        print("the temperature", temperatura, "is below average")
+
+# Students lists  
+students = ["Ana", "Luis", "Marta", "Pedro", "Lucía", "Diego"]
+grades = [85, 60, 90, 55, 72, 40]
+average = sum(grades) / len(grades)
+print("Average of the group is:", average)
+
+failedstudentcount = 0
+
+for grade in grades:
+    if grade < 70:
+        failedstudentcount = failedstudentcount + 1
+
+print("Number of students who failed:", failedstudentcount)
+
+print("Percentage of students who failed:")
+print((failedstudentcount / len(students)) * 100)
+
+# Shopping list 
+shopping_list = ["milk", "eggs", "bread", "butter", "cheese", "apples", "bananas", "chicken", "rice", "pasta"]
+already_bought = [True, False, True, False, True, False, True, False, True, False]
+print("items not purchased:")
+for i in range(len(shopping_list)):
+    if already_bought[i] == False:
+        print(shopping_list[i])
+for i in range(len(shopping_list)):
+    if already_bought[i] == False:
+        answer = input("Have you already bought " + shopping_list[i] + "? (yes/no) ")
+        if answer.lower() == "yes":
+            already_bought[i] = True
+print("Updated shopping list:")
+for i in range(len(shopping_list)):
+    if already_bought[i] == True:
+        print(shopping_list[i]+" Purchased")
+    else:
+        print(shopping_list[i]+" Not Purchased")
+        
+
+#Numbers in a list
+numbers = [10, 23, 45, 67, 89, 12, 34, 56, 78, 90]
+max_number = max(numbers)
+min_number = min(numbers)
+ordered_numbers = sorted(numbers)
+print("Original numbers:", numbers)
+print("Max number:", max_number)
+print("Min number:", min_number)
+print("Ordered numbers:", ordered_numbers)
+
+#Even and odd numbers
+numbers = [10, 23, 45, 67, 89, 12, 34, 56, 78, 90]
+even_numbers = []
+odd_numbers = []
+for n in numbers:
+    if n % 2 == 0:
+        even_numbers.append(n)
+    else:
+        odd_numbers.append(n)
+print("Even numbers:", even_numbers)
+print("Odd numbers:", odd_numbers)
+
+#Usernames
+usernames = ["alice", "bob", "charlie", "david", "eve", "frank", "grace", "heidi", "ivan", "judy"]
+print("Current usernames:", usernames)
+new_username = input("Enter a new username: ")
+while new_username in usernames:
+    print("Username already taken. Please choose another one.")
+    new_username = input("Enter a new username: ")
+usernames.append(new_username)
+print("Updated usernames:", usernames)
+
+
